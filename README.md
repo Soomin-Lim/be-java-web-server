@@ -40,6 +40,7 @@ Java Web Application Server 2022
 ---
 
 ## 프로젝트 진행 상황
+### [PR 링크](https://github.com/softeerbootcamp/be-java-web-server/pull/206)
 - [x] step1 구현 - index.html 응답
 - [x] step2 구현 - GET으로 회원가입
 - [x] step3 구현 - stylesheet 지원
