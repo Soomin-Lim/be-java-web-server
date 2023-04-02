@@ -9,12 +9,7 @@ Java Web Application Server 2022
 
 ---
 
-## 프로젝트 진행 상황
-- [x] step1 구현
-- [ ] step2 구현
-- [ ] step3 구현
-
-## 학습한 내용
+## 프로젝트 진행 전 학습한 내용
 
 ### 입출력 스트림
 
@@ -42,3 +37,32 @@ Java Web Application Server 2022
 - 버퍼를 이용해서 입출력의 효율을 높인다.
 - `BufferedReaader`의 `readLine()`을 사용하면 데이터를 라인단위로 읽을 수 있다.
 
+---
+## 프로젝트 진행 상황
+### [PR 링크](https://github.com/softeerbootcamp/be-java-web-server/pull/14)
+- [x] step1 구현
+- [ ] step2 구현
+- [ ] step3 구현
+
+웹 서버 1단계 요구사항에 맞춰 기능 구현을 완료했으며, 웹서버 2단계의 기능 요구사항은 완료했지만 리팩토링과 단위테스트를 미구현하였다.
+
+### 웹 서버
+1. 웹 서버 1단계 구현 완료
+- [x] `http://localhost:8080/index.html` 로 접속했을 때 `src/main/resources/templates` 디렉토리의 index.html 파일을 읽어 클라이언트에 응답한다.
+2. 웹 서버 2단계 구현 중
+- [x] GET으로 회원가입 기능 구현
+    - [x] 사용자(User)와 관련된 요청을 처리하는 `UserRequestHandler` 클래스 생성
+    - [x] 비즈니스 로직을 처리하는 UserService 클래스 생성
+        - [x] 쿼리스트링에서 사용자가 입력한 값을 파싱하여 파싱한 값을 바탕으로 `User` 객체를 생성
+        - [x] 생성한 User 객체를 `Database`에 저장
+    - [x] 회원가입을 완료하면 로그인 폼으로 리다이렉트하도록 구현
+- [x] 사용자 요청에 따라 적절한 파일 경로를 반환하는 `ViewResolver` 클래스 생성
+- [ ] 단위 테스트
+
+## 추후 진행 사항
+1. TODO
+- `RequestHandler`의 `searchRequestHandler()` 메서드 수정
+- `UserRequestHandler`의 `handle()` 메서드 수정
+- `ViewResolver`의 `process()` 메서드 수정
+2. 단위 테스트
+3. 3단계 구현
